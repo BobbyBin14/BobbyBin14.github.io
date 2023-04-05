@@ -1,0 +1,305 @@
+/*
+For this assignment, I chose the layout from the Hedra - page 25 because the shape of the grid system there really intrigues me with all the sci-fi elements, also the shape is supposed to be a tunnel so I think to myself that I can fit a story there for my color palette that I intended to use for this project. Fun side note it also reminds me of the sandworm from Dune, probably because the tube shape and the human figure are also in a sci-fi-inspired environment.
+
+For the colors of the CSS style itself, I took inspiration from the color palettes/color sequences from the movie Prunch-Drunk Love by Paul Thomas Anderson. It's one of my favorite films and the usage of color and its connection to emotions not only with the audience but also with the characters in the film itself was mesmerizing for me. The film is basically about a socially awkward and lonely man trying to let people and love into his life and how love can affect and somewhat change a human being. With that summary, the color palates that the film utilizes perfectly encapsulate the feeling of the main character Barry throughout the film and his development. So with the shape of the grid system acting as a tunnel, I decided to spread the color palette through the tunnel to encapsulate the development of the character in the film. At the beginning of the tunnel the dominant colors are all shades of blue and purple which represent loneliness of Barry at the beginning of the film, then comes the transitional phase when he opened his heart and lets love come in, then the majority of his journey is about finding love hence why the colors are now all bright pink and red which represented love and passionate. In the end when he finally got the love of his life, the colors now still bright and upbringing but at the end we have a lighter shade of purple which represented the stability of his life and love at the end of his journey, he's finally at the comfortable phase at the end of this tunnel.
+*/
+
+:root {
+    background-color:#BC3C64ff;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  
+  .container>.item1 {
+    background-color:#5C0906ff;
+    aspect-ratio: 1;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 5px;
+    }
+
+  .container>.item2 {
+    background-color: #74448Fff;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-radius: 5px;
+    }
+
+  .container>.item3 {
+    background-color: #6ACFF2ff;
+    aspect-ratio: 1;
+    border-top:3px solid black;
+    border-right: 3px solid black;
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    }
+
+  .container>.item4 {
+    background-color:#530E0Aff;
+    aspect-ratio: 1;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 5px;
+    border-top-left-radius: 50px;
+    }
+
+  .container>.item5 {
+    background-color:#5B100Bff;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    }
+
+   .container>.item6 {
+     background-color: #AFC9F7ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item7 {
+     background-color:#BC3C64ff;
+     aspect-ratio: 1;
+     
+     border-radius: 5px;
+    }
+
+   .container>.item8 {
+     background-color: #5290F0ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-radius: 5px;
+    }
+
+    .container>.item9 {
+     background-color: #9A8E84ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+    .container>.item10 {
+     background-color: #D1416Dff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item11 {
+     background-color: #002794ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item12 {
+     background-color:#A496DDff;
+     aspect-ratio: 1;
+     border-radius: 5px;
+    }
+
+   .container>.item13 {
+     background-color:#927EE3ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-radius: 5px;
+    }
+
+    .container>.item14 {
+     background-color: #8497AAff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+     
+    .container>.item15 {
+     background-color: #D4447Fff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+                                      
+   .container>.item16 {
+     background-color:#A0A3F4ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-left-radius: 50px;
+     }
+
+   .container>.item17 {
+     background-color: #5B61D0ff;
+     aspect-ratio: 1;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item18 {
+     background-color: #002794ff;
+     aspect-ratio: 1;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+    }
+
+    .container>.item19 {
+     background-color: #5D6F88ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-right-radius: 50px;
+     }
+     
+    .container>.item20 {
+     background-color: #E8ADCBff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item21 {
+     background-color: #B81010ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-top: 3px solid black;
+     border-radius: 5px;
+     border-top-left-radius: 50px;
+     }
+
+   .container>.item22 {
+     background-color: #670000ff;
+     aspect-ratio: 1;
+     border-top: 3px solid black;
+     border-right: 3px solid black;
+     border-radius: 5px;
+     border-top-right-radius: 50px;
+     }
+
+   .container>.item23 {
+     background-color:#DA7D40ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-top: 3px solid black;
+     border-radius: 5px;
+     border-top-left-radius: 50px;
+     }
+
+    .container>.item24 {
+     background-color:#B9674Eff;
+     aspect-ratio: 1;
+     border-top: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+    }
+     
+    .container>.item25 {
+     background-color:#D24078ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-right-radius: 50px;
+     }
+           
+   .container>.item26 {
+     background-color:#B81010ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-left: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item27 {
+     background-color:#D64960ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-left-radius: 50px
+     }
+
+   .container>.item28 {
+     background-color:#DA5655ff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-right-radius: 50px;
+     }
+
+    .container>.item29 {
+     background-color: #B54885ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-top: 3px solid black;
+     border-radius: 5px;
+     border-top-left-radius: 50px;
+     }
+     
+    .container>.item30 {
+     background-color:#8F5E94ff;
+     aspect-ratio: 1;
+     border-top: 3px solid black;
+     border-right: 3px solid black;
+     border-radius: 5px;
+     border-top-right-radius: 50px;;
+     }
+
+    .container>.item31 {
+     background-color: #E12989ff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-left-radius: 50px;
+     }
+           
+   .container>.item32 {
+     background-color: #F26DACff;
+     aspect-ratio: 1;
+     border-top: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item33 {
+     background-color:#F0231Dff;
+     aspect-ratio: 1;
+     border-top: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+    }
+
+   .container>.item34 {
+     background-color: #9E0A0Fff;
+     aspect-ratio: 1;
+     border-right: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-right-radius: 50px;
+     }
+
+    .container>.item35 {
+     background-color: #9D728Eff;
+     aspect-ratio: 1;
+     border-left: 3px solid black;
+     border-bottom: 3px solid black;
+     border-radius: 5px;
+     border-bottom-left-radius: 50px
+     }
+     
+       
+
