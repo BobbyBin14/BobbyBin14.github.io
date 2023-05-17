@@ -1,0 +1,439 @@
+/*FONTS*/
+@font-face {
+    font-family: "MyFont";
+    src: url(folder/ASHOKA.ttf);
+}
+
+@font-face {
+    font-family: "secondfont";
+    src: url(folder/Anthena\ for\ Personal\ Use\ License.otf);
+}
+
+h1{
+    font-size: 30vmin;
+    font-family: "Myfont";
+    color: white;
+    position: absolute;
+    left: 15vw;
+    top: 2vh;
+    letter-spacing: 0;
+}
+
+h2{
+    font-family: "secondfont";
+    font-size: 25vmin;
+    margin: 5vmin;
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    rotate: 90deg;
+
+
+}
+
+h3{
+    font-family: "Myfont";
+    font-size: 20vmin;
+    color: white;
+    margin: 0;
+    position: absolute;
+    right: 11vw;
+    bottom: 20vh;
+    rotate: 90deg;
+    letter-spacing: 0.5vmin;
+  
+}
+
+h4{
+    font-family: "secondfont";
+    font-size: 25vmin;
+    position: absolute;
+    margin: 0;
+    right: 20vw;
+    bottom: 5vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 0 0;
+    padding-left: 0;
+}
+
+body{
+
+    background: radial-gradient(circle, rgba(255,192,203,1) 49%, rgba(242,109,158,1) 91%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 80vmin;
+}
+/* CUBOID TO CREATE A SHAPE OF HEART*/
+.cuboid {
+    --width: 5vmin;
+    --height: 5vmin;
+    --depth: 5vmin;
+    height: var(--height);
+    width: var(--width);
+    --color: #F26D9E;
+    position: relative;
+    transform: rotateX(24deg) rotateY(32deg);
+    transform-style: preserve-3d;
+}
+
+.cuboid_side {
+    background-color: var(--color);
+    border: 0.1vmin solid;
+    position: absolute;
+}
+
+.cuboid_side:nth-of-type(1),
+.cuboid_side:nth-of-type(2) {
+    --coefficient: -0.5;
+    height: var(--height);
+    width: var(--width);
+    transform: translate3d(0, 0 , calc(var(--depth) * var(--coefficient)));
+    
+}
+
+.cuboid_side:nth-of-type(2){
+    --coefficient: 0.5;
+}
+
+.cuboid_side:nth-of-type(3),
+.cuboid_side:nth-of-type(4) {
+    --rotation: 90deg;
+    height: var(--height);
+    width: var(--depth);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)  rotateY(var(--rotation)) translate3d(0, 0, calc(var(--width) * -0.5));
+}
+
+.cuboid_side:nth-of-type(4){
+    --rotation: -90deg;
+}
+
+.cuboid_side:nth-of-type(5),
+.cuboid_side:nth-of-type(6){
+    --rotation: -90deg;
+    height: var(--depth);
+    width: var(--width);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--height) * -0.5));
+
+}
+
+.cuboid_side:nth-of-type(6){
+    --rotation: 90deg;
+}
+
+
+.cuboid:nth-of-type(1){
+    margin-right: 13vmin;
+    margin-bottom: -1.3vmin;
+    --width: 7vmin;
+    --height: 5vmin; 
+    --depth: 7vmin;
+    /*--color: #BF0404;*/
+    animation: cube_6 7.5s ease-out infinite alternate;
+}
+
+
+.cuboid:nth-of-type(2) {
+    --width: 7vmin;
+    --height: 5vmin;
+    --depth: 7vmin;
+    /*--color: #F2B807;*/
+    margin-right: -10vmin;
+    margin-bottom: -3vmin;
+    animation: cube_7 7.5s ease-out infinite alternate;
+
+}
+
+.cuboid:nth-of-type(3) {
+    --width: 30vmin;
+    --height: 7vmin;
+    --depth: 5vmin;
+    /*--color: #0477BF;*/
+
+}
+
+.cuboid:nth-of-type(4) {
+    --width: 30vmin;
+    --height: 5vmin;
+    --depth: 10vmin;
+    /*--color: #03A63C;*/
+    animation: cube_4 7.5s ease-out infinite alternate;
+}
+
+.cuboid:nth-of-type(5) {
+    --width: 22vmin;
+    --height: 5vmin;
+    --depth: 8vmin;
+    /*--color: #BF0404;*/
+    animation: cube_3 6s linear normal;
+
+}
+
+.cuboid:nth-of-type(6) {
+    --width: 15vmin;
+    --height: 5vmin;
+    --depth: 5vmin;
+    /*--color: #F2BB16;*/
+}
+.cuboid:nth-of-type(7){
+    --width: 5vmin;
+    --height: 5vmin;
+    --depth: 7vmin;
+    /*--color: #0477FE;*/
+    animation: cube_1 7.5s ease-out infinite alternate;
+}
+
+/* ANIMATION FOR THE CUBOID */
+@keyframes cube_1
+{
+    0%{
+        transform: rotateX(24deg) rotateY(360deg);
+        top: 10vmin;
+    }
+
+    100%{
+        transform: rotateX(24deg) rotateY(30deg);
+        top: 0vmin;
+    }
+}
+
+@keyframes cube_3{
+    0%{
+        transform: rotateX(24deg) rotateY(360deg);
+    }
+
+    100%{
+        transform: rotateX(24deg) rotateY(30deg);
+    }
+}
+
+@keyframes cube_4{
+    0%{
+        transform: rotateX(24deg) rotateY(-360deg);
+    }
+
+    100%{
+        transform: rotateX(24deg) rotateY(30deg);
+    }
+}
+
+@keyframes cube_6{
+    0%{
+        right: 20vmin;
+       
+    }
+
+    100%{
+        right: 0vmin;
+    }
+}
+
+@keyframes cube_7{
+    0%{
+        bottom: 15vmin;
+    }
+
+    25%{
+        bottom: 7vmin;
+    }
+
+    50%{
+        bottom: 4vmin;
+    }
+
+    75%{
+        bottom: 2vmin;
+    }
+
+    100%{
+        bottom: 0vmin;
+    }
+}
+
+/* LITTE HEART IN THE BACKGROUND */
+.heart{
+    background: #F26D9E;
+    box-shadow: -1vmin 1vmin 9vmin #F26D9E;
+    height: 7vmin;
+    width: 7vmin;
+    left: 35vmin;
+    bottom: 20vmin;
+    position: absolute;
+    transform: rotate(-70deg);
+    animation: heart_1 0.6s linear infinite alternate;
+}
+
+.heart::after {
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0 ;
+    height: 7vmin;
+    width: 7vmin;
+    box-shadow: -1vmin -1vmin 9vmin #F26D9E;
+}
+
+.heart::before {
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50% ;
+    height: 7vmin;
+    width: 7vmin;
+    box-shadow: 1vmin 1vmin 9vmin #F26D9E;
+}
+
+@keyframes heart_1{
+    0%{
+        transform: rotate(-70deg) scale(0.7);
+    }
+
+}
+
+
+
+.heart_right {
+    height: 5vmin;
+    width: 5vmin;
+    background-color: #F26D9E;
+    box-shadow: -1vmin 1vmin 9vmin #F26D9E;
+    right: 25vmin;
+    top: 25vmin;
+    position: absolute;
+    transform: rotate(-20deg);
+    animation: heart_2 1s ease-out infinite alternate;
+}
+
+.heart_right::after{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0 ;
+    height: 5vmin;
+    width: 5vmin;
+    box-shadow: -1vmin -1vmin 9vmin #F26D9E;
+}
+
+.heart_right::before{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50% ;
+    height: 5vmin;
+    width: 5vmin;
+    box-shadow: 1vmin 1vmin 9vmin #F26D9E;
+}
+
+@keyframes heart_2{
+    0%{
+        transform: rotate(-70deg) scale(0.7);
+    }
+}
+
+
+
+.smallheart{
+    width: 2vmin;
+    height: 2vmin;
+    background: white;
+    box-shadow: -1vmin 1vmin 9vmin #F26D9E;
+    left: 15vmin;
+    bottom: 10vmin;
+    position: absolute;
+    transform: rotate(-45deg);
+    animation: heart_3 1s ease-out infinite alternate;
+}
+
+.smallheart::after{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0 ;
+    height: 2vmin;
+    width: 2vmin;
+    box-shadow: -1vmin -1vmin 9vmin #F26D9E;
+}
+
+.smallheart::before{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50% ;
+    height: 2vmin;
+    width: 2vmin;
+    box-shadow: 1vmin 1vmin 9vmin #F26D9E;
+}
+
+@keyframes heart_3{
+    0%{
+        transform: scale(0.5);
+    }
+}
+
+
+.tinyheart{
+    width: 2vmin;
+    height: 2vmin;
+    background: white;
+    box-shadow: -1vmin 1vmin 9vmin #F26D9E;
+    right: 21vmin;
+    top: 14vmin;
+    position: absolute;
+    transform: rotate(-60deg);
+    animation: heart_4 0.6s linear infinite alternate;
+}
+
+.tinyheart::after{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0 ;
+    height: 2vmin;
+    width: 2vmin;
+    box-shadow: -1vmin -1vmin 9vmin #F26D9E;
+}
+
+.tinyheart::before{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50% ;
+    height: 2vmin;
+    width: 2vmin;
+    box-shadow: 1vmin 1vmin 9vmin #F26D9E;
+}
+
+@keyframes heart_4{
+    0%{
+        transform: rotate(-60deg) scale(0.7);
+    }
+}
